@@ -23,7 +23,6 @@ class CalculadoraHija(Calculadora):
         except ZeroDivisionError as err:
             return 'Division by zero is not allowed'
         
-
 if __name__ == "__main__":
     micalchija = CalculadoraHija()
     try:
