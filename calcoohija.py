@@ -7,14 +7,7 @@ Created on Tue Sep 25 09:40:20 2018
 """
 
 import sys
-
-
-class Calculadora:
-    def plus(self, op1, op2):
-        return op1 + op2
-
-    def minus(self, op1, op2):
-        return op1 - op2
+from calcoo import Calculadora
 
 
 class CalculadoraHija(Calculadora):
@@ -37,14 +30,14 @@ if __name__ == "__main__":
         sys.exit("Error: Non numerical parameters")
 
     if sys.argv[2] == "suma":
-        Calculadora = micalchija.plus(operando1, operando2)
+        Total = micalchija.plus(operando1, operando2)
     elif sys.argv[2] == "resta":
-        Calculadora = micalchija.minus(operando1, operando2)
+        Total = micalchija.minus(operando1, operando2)
     elif sys.argv[2] == 'multiplica':
-        Calculadora = micalchija.multiplication(operando1, operando2)
+        Total = micalchija.multiplication(operando1, operando2)
     elif sys.argv[2] == 'divide':
-        Calculadora = micalchija.division(operando1, operando2)
+        Total = micalchija.division(operando1, operando2)
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
 
-    print(Calculadora)
+    print(Total)
