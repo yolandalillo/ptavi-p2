@@ -11,27 +11,28 @@ import sys
 fichero = './fichero'
 
 
-class Calculadora: 
+class Calculadora:
     def plus(listanumeros):
         suma = listanumeros[0]
         for i in listanumeros[1:]:
             suma += i
         return suma
-    
+
     def minus(listanumeros):
         resta = listanumeros[0]
         for i in listanumeros[1:]:
             resta -= i
         return resta
-   
+
+
 class CalculadoraHija(Calculadora):
     def multiplication(listanumeros):
         multiplication = 1
         for i in listanumeros[1:]:
             multiplication *= i
         return multiplication
-    
-    def division(listanumeros): 
+
+    def division(listanumeros):
         division = 1
         try:
             for i in listanumeros[1:]:
@@ -39,7 +40,7 @@ class CalculadoraHija(Calculadora):
             return division
         except ZeroDivisionError as err:
             return 'Division by zero is not allowed'
-        
+
 
 if __name__ == "__main__":
     with open(fichero, 'r') as reader:
@@ -47,7 +48,7 @@ if __name__ == "__main__":
             lista = line.split(',')
             lista = lista[:-1]
             listanumeros = list(map(int, lista[1:]))
-           
+
             if lista[0] == 'suma':
                 Total = CalculadoraHija.plus(listanumeros)
             elif lista[0] == "resta":
@@ -58,5 +59,5 @@ if __name__ == "__main__":
                 Total = CalculadoraHija.division(listanumeros)
             else:
                 sys.exit('Operación sólo puede ser sumar o restar.')
-                
-            print (lista[0], Total)
+
+            print(lista[0], Total)
