@@ -13,6 +13,7 @@ class Calculadora:
         return op1 + op2
     def minus(self,op1,op2):
         return op1 - op2
+    
 if __name__ == "__main__":
     micalc = Calculadora()
     try:
