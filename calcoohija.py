@@ -7,10 +7,10 @@ Created on Tue Sep 25 09:40:20 2018
 """
 
 import sys
-from calcoo import Calculadora
+import calcoo
 
 
-class CalculadoraHija(Calculadora):
+class CalculadoraHija(calcoo.Calculadora):
     def multiplication(self, op1, op2):
         return op1 * op2
 
