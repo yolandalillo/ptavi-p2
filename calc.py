@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-#comentario
+
 
 import sys
 
@@ -13,6 +13,7 @@ def plus(op1, op2):
 def minus(op1, op2):
     """ Function to substract the operands """
     return op1 - op2
+
 
 if __name__ == "__main__":
     try:

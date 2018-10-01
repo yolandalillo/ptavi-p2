@@ -10,8 +10,8 @@ import sys
 
 fichero = './fichero'
 
-class Calculadora:
-    
+
+class Calculadora: 
     def plus(listanumeros):
         suma = listanumeros[0]
         for i in listanumeros[1:]:
@@ -48,7 +48,6 @@ if __name__ == "__main__":
             lista = lista[:-1]
             listanumeros = list(map(int, lista[1:]))
            
-            
             if lista[0] == 'suma':
                 Total = CalculadoraHija.plus(listanumeros)
             elif lista[0] == "resta":
@@ -59,13 +58,5 @@ if __name__ == "__main__":
                 Total = CalculadoraHija.division(listanumeros)
             else:
                 sys.exit('Operación sólo puede ser sumar o restar.')
-            print (lista[0], Total)
-
- 
-        
-
                 
-             
-       
-        
- 
+            print (lista[0], Total)
