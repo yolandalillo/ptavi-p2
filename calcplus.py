@@ -13,7 +13,10 @@ fichero = './fichero'
 
 if __name__ == "__main__":
     fd = open("fichero", encoding='utf-8', mode="r")
-    micalchija = calcoohija.CalculadoraHija()
+    try:
+        micalchija = calcoohija.CalculadoraHija()
+    except ValueError:
+        sys.exit("Error: Non numerical parameters")
     for line in fd:
         lista = line.split(',')
         listanumeros = list(map(int, lista[1:]))
