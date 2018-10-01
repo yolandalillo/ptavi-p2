@@ -8,21 +8,26 @@ Created on Tue Sep 25 09:40:20 2018
 
 import sys
 
+
 class Calculadora:
-    def plus(self,op1,op2):
+    def plus(self, op1, op2):
         return op1 + op2
-    def minus(self,op1,op2):
+
+    def minus(self, op1, op2):
         return op1 - op2
-    
+
+
 class CalculadoraHija(Calculadora):
     def multiplication(self, op1, op2):
         return op1 * op2
+
     def division(self, op1, op2):
         try:
             return op1 / op2
         except ZeroDivisionError as err:
             return 'Division by zero is not allowed'
-        
+
+
 if __name__ == "__main__":
     micalchija = CalculadoraHija()
     try:
@@ -41,5 +46,5 @@ if __name__ == "__main__":
         Calculadora = micalchija.division(operando1, operando2)
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
-    
+
     print(Calculadora)
